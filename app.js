@@ -1,4 +1,4 @@
-var app = angular.module('flapperNews', []);
+var app = angular.module('sawit', []);
 
 app.controller('MainCtrl', [ //The main controller, named MainCtrl, $scope is the constructor
 '$scope',
