@@ -13,8 +13,12 @@ function($scope){	//this scope will be how the view(what the user sees(DOM)) sta
   ];
   $scope.addPost = function(){  //created a scope function that will append a post to the posts array
 	if(!$scope.title || $scope.title === '') { return; } //prevents user from submitting post with blank title
-	$scope.posts.push({title: $scope.title, upvotes: 0}); //pushes the title from textbox to posts array
+	$scope.posts.push({
+		title: $scope.title,
+		link: $scope.link,
+		upvotes: 0}); //pushes the title/link data from textboxes to posts array and initializes upvotes
 		$scope.title = ''; //clears the title after post is created
+		$scope.link = '';
 	};
 	$scope.incrementUpvotes = function(post) { //this functions adds 1 to upvote counter
 		post.upvotes += 1;
